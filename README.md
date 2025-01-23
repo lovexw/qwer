@@ -8,16 +8,23 @@
 
 <p align="center">
   <a href="./docs/README_EN.md">English</a>
+  <a href="./docs/README_JP.md">日本語</a>
 </p>
 
 <p align="center">
   为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件
 </p>
 
-<p align="center">
+<p align="center" style="display: flex; justify-content: center; gap: 10px;">
   <a href="https://github.com/Realkai42/qwerty-learner/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Realkai42/qwerty-learner" alt="License"></a>
   <a><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/></a>
   <a><img src="https://img.shields.io/badge/Powered%20by-React-blue"/></a>
+  <a><img src="https://img.shields.io/github/stars/RealKai42/qwerty-learner"/></a>
+  <a><img src="https://img.shields.io/github/forks/RealKai42/qwerty-learner"/></a>
+  <a href="https://gitcode.com/RealKai42/qwerty-learner/overview"><img src="https://gitcode.com/RealKai42/qwerty-learner/star/badge.svg"/></a>
+    <a href="https://api.gitsponsors.com/api/badge/link?p=4DNHTkFshpqUNxrflL7n6ChVhCijBEN9zvnj50mFETUw2frmOXfrHW37m71uOnlp+eo/Vm8a0w94m0JeT4UAYxOAQwzuFiJS0UYIQ8H3km39ZcUnZ7wHNE05WpqBzTVcgZM26FijLiYv9m2p7mxx1w==">
+    <img src="https://api.gitsponsors.com/api/badge/img?id=331603334" height="20" alt="GitSponsors">
+  </a>
 </p>
 
 <div align=center>
@@ -26,17 +33,31 @@
 
 ## 📸 在线访问
 
-Vercel: <https://qwerty.kaiyi.cool/> , <https://qwerty-learner.vercel.app/>  
-GitHub Pages: <https://realkai42.github.io/qwerty-learner/>  
-Gitee Pages: <https://kaiyiwing.gitee.io/qwerty-learner/>
+**首选部署**: <https://qwerty.kaiyi.cool/>
+GitHub Pages: <https://realkai42.github.io/qwerty-learner/>
 
-国内用户建议使用 Gitee 访问
+镜像仓库:
+[GitCode: RealKai42/qwerty-learner](https://gitcode.com/RealKai42/qwerty-learner/overview)
+[Gitee: KaiyiWing/qwerty-learner](https://gitee.com/KaiyiWing/qwerty-learner)
 <br/>
 <br/>
 
-项目已发布 VSCode 插件版，一键启动、随时开始练习  
-[VSCode Plugin Market](https://marketplace.visualstudio.com/items?itemName=Kaiyi.qwerty-learner)  
+项目已发布 VSCode 插件版，一键启动、随时开始练习
+[VSCode Plugin Market](https://marketplace.visualstudio.com/items?itemName=Kaiyi.qwerty-learner)
 [GitHub](https://github.com/Realkai42/qwerty-learner-vscode)
+
+<br />
+
+## 快速部署
+
+### Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRealKai42%2Fqwerty-learner)
+
+#### 部署步骤
+
+1. 更新 `Vercel Build & Development Settings` -> `Output Directory`："build"
+2. Click Deploy Button
 
 <br />
 
@@ -103,7 +124,7 @@ Gitee Pages: <https://kaiyiwing.gitee.io/qwerty-learner/>
 
 ### 贡献代码
 
-[Call for Contributor](https://github.com/Realkai42/qwerty-learner/issues/390)  
+[Call for Contributor](https://github.com/Realkai42/qwerty-learner/issues/390)
 [贡献准则](./docs/CONTRIBUTING.md)
 
 ### 贡献词库
@@ -114,17 +135,44 @@ Gitee Pages: <https://kaiyiwing.gitee.io/qwerty-learner/>
 
 本项目是基于`React`开发的，需要 node 环境来运行。
 
+### 环境准备
+
+1. NodeJS
+2. Git
+3. Yarn
+
+> **验证是否已经拥有相关环境**
+>
+> 1. 手动验证  
+>    请在命令行下执行以下命令，查看是否有对应版本输出
+>
+>    ```sh
+>    node --version
+>    git --version
+>    yarn --version
+>    ```
+>
+> 2. 脚本验证  
+>    使用我们提供的脚本对所需环境进行验证，如果确实依赖项会自动安装
+>    - Windows 用户可以直接执行 [pre-check.ps1](scripts/pre-check.ps1) 脚本
+>    - MacOS 用户可以直接执行 [pre-check.sh](scripts/pre-check.sh) 脚本
+
+如果有对应环境缺失，我们可以参考下列官方文档进行安装
+
+> - [NodeJS](https://nodejs.org/en/download)
+> - [Git](https://git-scm.com/downloads)
+> - [yarn](https://classic.yarnpkg.com/lang/en/docs/install)
+
 ### 手动安装
 
-1. 安装 NodeJS，参考[官方文档](https://nodejs.org/en/download)
-2. 使用 `git clone` 下载项目到本地, 不使用 git 可能因为缺少依赖而无法运行
-3. 打开命令行，在项目根目录下，运行`yarn install`来下载依赖。
-4. 执行`yarn start`来启动项目，项目默认地址为`http://localhost:5173/`
-5. 在浏览器中打开`http://localhost:5173/`来访问项目。
+1. 在命令行中执行 `git clone https://github.com/RealKai42/qwerty-learner.git` 将项目拉取到本地, 如果不使用 git 可能因为缺少依赖而无法运行
+2. 在命令行中执行 `cd qwerty-learner`，进入项目根目录，执行`yarn install`来下载依赖。
+3. 执行`yarn start`来启动项目，项目默认地址为`http://localhost:5173/`
+4. 在浏览器中打开`http://localhost:5173/`来访问项目。
 
 ### 脚本执行
 
-对于 Windows 用户，可以直接执行 ps1 脚本，来一键安装依赖并启动项目。
+对于 Windows 用户，可以直接执行 [install.ps1](scripts/install.ps1) 脚本，来一键安装依赖并启动项目。
 
 1. 打开 powershell，定位到项目根目录中的`scripts`目录
 2. 在命令行中，执行`.\install.ps1`
@@ -133,13 +181,22 @@ Gitee Pages: <https://kaiyiwing.gitee.io/qwerty-learner/>
 > 备注
 > 脚本依赖`winget`来安装 node，仅在 Windows 10 1709（版本 16299）或更高版本上受支持！
 
+对于 MacOS 用户，可以直接执行 [install.sh](scripts/install.sh) 脚本来一键安装依赖并启动项目
+
+1. 打开终端，并进入此项目文件夹
+2. 在命令行中执行 `scripts/install.sh`
+3. 等待脚本完成
+
+> 此脚本依赖于 `homebrew`，请确保自己电脑上可以执行`brew`命令
+
 ## 🏆 荣誉
 
 - Github 全球趋势榜上榜项目
 - V2EX 全站热搜项目
 - Gitee 全站推荐项目
 - [少数派首页推荐](https://sspai.com/post/67535)
-- Gitee 最有价值开源项目([GVP](https://gitee.com/gvp))
+- GitCode 开源摘星计划-毕业项目（[G-Star 计划](https://gitcode.com/g-star)）
+- Gitee 最有价值开源项目（[GVP](https://gitee.com/gvp)）
 
 ## 📕 词库列表
 
@@ -161,6 +218,7 @@ Gitee Pages: <https://kaiyiwing.gitee.io/qwerty-learner/>
 - 人教版英语 3-9 年级
 - 王陆雅思王听力语料库 [@Saigyouji_WKKun](https://github.com/ggehuliang)
 - 日语常见词、N1 ～ N5 [@xiaojia](https://github.com/wetery)
+- 哈萨克语基础 3000 词(哈拼版) 来源于 [@Elgar](https://github.com/Elgar17) 由 [@Herbert He](https://github.com/HerbertHe) 通过 [哈拼](https://ha-pin.js.org) 技术支持
 
 如果您需要背诵其他词库，欢迎在 Issue 中提出
 
@@ -220,25 +278,25 @@ Gitee Pages: <https://kaiyiwing.gitee.io/qwerty-learner/>
 
 ### 灵感来源
 
-[Keybr](https://www.keybr.com/)  
+[Keybr](https://www.keybr.com/)
 以算法著称，功能非常完善的打字网站，根据用户输入每个字母的正确率与速度生成“伪英语”来帮助用户集中锻炼个别输入较慢的字母。并可以根据用户的输入记录生成完整的分析报告。
 
 也是本项目的核心灵感来源，Keybr 更多针对英语为母语的用户。在我使用 Keybr 练习打字时，觉得虽然生成的伪英语能够练习输入不顺畅的个别字母，但并不能提升非母语用户对单词的掌握，于是有了本项目。
 
-[Typing Academy](https://www.typing.academy)  
-非常优秀的打字练习网站  
+[Typing Academy](https://www.typing.academy)
+非常优秀的打字练习网站
 其优秀的 UI 风格，以及对速度、正确率的展示极大的影响了本项目的 UI 设计
 
-[react-code-game](https://github.com/webzhd/react-code-game)  
+[react-code-game](https://github.com/webzhd/react-code-game)
 一个非常酷的开源项目，使用 ts 实现，可以在练习打字的同时练习 js 内置 api，项目中添加代码 api 的想法便来源自此项目。
 <br/><br/>
 
 ### 开源项目
 
-[React](https://github.com/facebook/react) & [CRA](https://github.com/facebook/create-react-app)  
+[React](https://github.com/facebook/react) & [CRA](https://github.com/facebook/create-react-app)
 完整和详细的文档对初学者非常友好，React 系的文档是我目前自学过程中读过最棒的文档，几乎解决使用中大部分问题。非常感谢 React 对开源世界的贡献，为我们搭建了很好的基础，让初学者也能构建非常棒的软件。
 
-[Tailwindcss](https://tailwindcss.com/docs)  
+[Tailwindcss](https://tailwindcss.com/docs)
 如果没有 tailwind，这个项目还有再拖一阵子，tailwind 的设计思路解决了 css 入门选手对写复杂 css 的恐惧，让新手以一个非常舒适的方式去设计 UI。
 <br/><br/>
 
